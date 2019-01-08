@@ -1,0 +1,33 @@
+/*Main css styles*/
+
+@font-face {
+  font-family: 'Julius';
+  src: url(fonts/JuliusSansOne-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Assistant';
+  src: url(fonts/Assistant-Regular.ttf) format('truetype');
+}
+
+body {
+  font-family: 'Assistant';
+  line-height: 1.8;
+  color: #66a3d9 !important;
+  background-color: #191c21;
+}
+
+h1 {
+  font-family: 'Julius';
+  color: #66a3d9 !important;
+}
+h2 {
+  font-family: 'Julius';
+  color: #66a3d9 !important;
+}
+h3 {
+  font-family: 'Julius';
+  color: #191c21 !important;
+}
+.icon-color {
+  color: #66a3d9;
+}
