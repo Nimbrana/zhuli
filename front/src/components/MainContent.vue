@@ -2,46 +2,39 @@
   <div class="container-fluid">
     <div class="menu-content">
       <div class="card-group">
-        <div class="card text-center" v-on:mouseover="mouseOver('Robin')" v-on:mouseleave="mouseOver(' ')">
+        <div
+          v-for="(menu,key) in Menu"
+          v-bind:item="menu"
+          v-bind:index="key"
+          v-bind:key="key"
+          class="card text-center"
+          v-on:mouseover="mouseOver(menu.name)"
+          v-on:mouseleave="mouseOver(' ')"
+        >
           <div class="card-body">
-            <h3 class="card-title">Tareas</h3>
+            <h3 class="card-title">{{menu.title}}</h3>
           </div>
-          <img class="card-img-bottom" src="../assets/img/ic_robin.svg" alt="Card image cap">
-        </div>
-        <div class="card text-center" v-on:mouseover="mouseOver('Scriba')" v-on:mouseleave="mouseOver(' ')">
-          <div class="card-body">
-            <h3 class="card-title">Notas</h3>
-          </div>
-          <img class="card-img-bottom" src="../assets/img/ic_scriba.svg" alt="Card image cap">
-        </div>
-        <div class="card text-center" v-on:mouseover="mouseOver('Wan shi tong')" v-on:mouseleave="mouseOver(' ')">
-          <div class="card-body">
-            <h3 class="card-title">Wiki</h3>
-          </div>
-          <img class="card-img-bottom" src="../assets/img/ic_wan-shi-tong.svg" alt="Card image cap">
-        </div>
-        <div class="card text-center" v-on:mouseover="mouseOver('Chad')" v-on:mouseleave="mouseOver(' ')">
-          <div class="card-body">
-            <h3 class="card-title">Chat</h3>
-          </div>
-          <img class="card-img-bottom" src="../assets/img/ic_chad.svg" alt="Card image cap">
+          <img class="card-img-bottom" :src="menu.image" alt="Card image cap">
         </div>
       </div>
     </div>
-    <div  class="container-fluid">
+    <div class="container-fluid">
       <h1 id="hello" ref="hello" style="text-align: center;">{{name}}</h1>
     </div>
   </div>
-
 </template>
 
 <script>
+import MenuJson from "../assets/data/menu.json";
+import Vue from "vue";
+
 export default {
   name: "MainContent",
   data() {
     return {
-        name : " "
-    }
+      Menu: MenuJson.menu,
+      name: " "
+    };
   },
   methods: {
     mouseOver: function(n) {
@@ -51,14 +44,13 @@ export default {
     }
   }
 };
-
+Vue.filter("truncate", function(text, stop, clamp) {
+  return text.slice(0, stop) + (stop < text.length ? clamp || "..." : "");
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.on {color: green !important;}
-
-.off {color: red !important;}
 .menu-content {
   margin-top: 5%;
   margin-bottom: 2%;

@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark background-blue-navbar">
     <a class="navbar-brand" href="#">
-      <img src="../assets/img/ic_zhuli-logo.svg" width="60" height="60" alt>
+      <img src="../assets/img/ic_zhuli-logo.svg" width="50" height="50" alt>
     </a>
     <button
       class="navbar-toggler"
@@ -32,7 +32,7 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            <font-awesome-icon icon="bell" size="2x" class="icon-color"/>
+            <font-awesome-icon icon="bell" size="lg" class="icon-color"/>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Notification 1... 2:00pm</a>
@@ -45,7 +45,7 @@
       </ul>
       <ul class="navbar-nav ">
         <a class="nav-item">
-          <img class="avatar-style" src="https://avatars2.githubusercontent.com/u/4169949?s=460&v=4" width="60" height="60" alt>
+          <img class="avatar-style" src="https://avatars2.githubusercontent.com/u/4169949?s=460&v=4" width="50" height="50" alt>
         </a>
       </ul>
     </div>
@@ -80,11 +80,11 @@ a:hover {
   background-color: #dbe6ff;
 }
 .profile-style {
-  padding-right: 3%;
+  padding-right: 2%;
 }
 .dropdown-menu {
   left: 50% !important;
-  transform: translateX(-50%) !important;
+  transform: translateX(-85%) !important;
   top: 100% !important;
 }
 @media screen and (max-width: 768px) {
@@ -92,5 +92,8 @@ a:hover {
     padding-left: 0;
     padding-right: 0;
   }
+}
+.dropdown-toggle::after {
+    display: none;
 }
 </style>

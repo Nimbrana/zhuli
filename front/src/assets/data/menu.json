@@ -1,0 +1,29 @@
+{
+    "menu":
+    [
+        {
+            "title": "Tareas",
+            "image": "img/ic_robin.svg",
+            "name": "Robín",
+            "link": "/tareas-robin"
+        },
+        {
+            "title": "Notas",
+            "image": "img/ic_scriba.svg",
+            "name": "Scriba",
+            "link": "/notas-scriba"
+        },
+        {
+            "title": "Wiki",
+            "image": "img/ic_wan-shi-tong.svg",
+            "name": "Wan shi tong",
+            "link": "/wiki-wan-shi-tong"
+        },
+        {
+            "title": "Chat",
+            "image": "img/ic_chad.svg",
+            "name": "Chad",
+            "link": "/chat-chad"
+        }
+    ]
+  }
